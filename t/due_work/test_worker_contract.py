@@ -155,10 +155,19 @@ def body_ready(app):
     return lambda body_id: AsyncResult(body_id, app=app).ready()
 
 
+def broker_owes_nothing():
+    """No message is queued, or reserved and unacknowledged (a retry waiting out its countdown is reserved)."""
+    broker = redis.Redis.from_url(due_work.BROKER)
+    return broker.llen('celery') == 0 and broker.hlen('unacked') == 0
+
+
 def body_ready_or_chord_unlock_failed(body_id):
-    """The chord is settled when its body is, or when the chord_unlock joining it has failed for good."""
+    """
+    The chord is settled when its body is, or the chord_unlock joining it has failed for good, and the broker owes
+    nothing more: a header's own retry has run, so what the history observes no longer depends on machine speed.
+    """
     body = AsyncResult(body_id, app=due_work.database_app)
-    return body.ready() or due_work.RECORDS.llen('chord_unlock failed') > 0
+    return (body.ready() or due_work.RECORDS.llen('chord_unlock failed') > 0) and broker_owes_nothing()
 
 
 def chord_history(
