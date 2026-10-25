@@ -99,7 +99,7 @@ jobs:
         run: tox --verbose --verbose -e 3.13-due_work -- --due-work-profile-report=obligation-profiles.json
       - name: Report what the contract proved
         if: ${{ !cancelled() }}
-        uses: gigaverse-app/pytest-obligation/report@v1
+        uses: gigaverse-app/pytest-obligation/report@main
         with:
           application-paths: t/due_work
           report-path: obligation-profiles.json
@@ -133,7 +133,7 @@ jobs:
         id: lane
         run: echo "outcome=$(jq -r .test_outcome evidence/manifest.json)" >> "$GITHUB_OUTPUT"
       - name: Render the report into the README and the badge
-        uses: gigaverse-app/pytest-obligation/report@v1
+        uses: gigaverse-app/pytest-obligation/report@main
         with:
           application-paths: t/due_work
           report-path: evidence/reports/*.json
