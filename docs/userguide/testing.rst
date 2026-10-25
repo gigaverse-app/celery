@@ -401,3 +401,62 @@ the ``depends_on_current_app`` fixture:
     @pytest.mark.usefixtures('depends_on_current_app')
     def test_something():
         something()
+
+
+.. _testing-obligation:
+
+What your tasks do when a worker is lost
+========================================
+
+A worker can be lost in the middle of a task: a deploy restarts it, the
+kernel's OOM killer stops its pool child, the broker drops a connection. What
+your task leaves behind then depends on Celery's configuration and on the task
+itself: a welcome email may never be sent, or may be sent twice. Ordinary unit
+tests run the task once, with nothing failing, so they cannot tell.
+
+:mod:`celery.contrib.testing.obligation` builds a contract for one of your
+tasks with `pytest-obligation`_. pytest then generates tests that run the task
+through a real ``celery worker`` once for every stage where the worker can be
+lost or fail (as the task starts, after its body ran, after its result was
+stored; its ``on_success`` hook raising; the broker refusing its link), start
+the worker again, and compare the outcome with a normal run.
+
+You supply how your application sends the task, how to see what the task did,
+and what that should be after one successful run:
+
+.. code-block:: python
+
+    from celery.contrib.testing.obligation import task_contract
+    from pytest_obligation import due_work_contract_suite
+
+    from myapp.accounts import sign_up
+    from myapp.tasks import send_welcome_email
+
+    WELCOME = task_contract(
+        'myapp.celery:app',
+        send_welcome_email,
+        send=lambda: sign_up('ada@example.com'),
+        effect=lambda result: outbox.count('ada@example.com'),
+        expected_effect=1,
+    )
+
+
+    @due_work_contract_suite(WELCOME)
+    class test_WelcomeEmail:
+        pass
+
+Celery supplies the rest: how to run and fail its worker, and what Celery does
+at each stage for the task's ``acks_late`` and ``reject_on_worker_lost``. With
+both unset (the default), a task whose pool child is lost is recorded
+``FAILURE`` and not run again, so a task lost as it starts never does its work.
+That is declared for you as a strict expected failure. Set both, and the task
+runs again instead; whether running it twice repeats its effect is a property
+of your task, and the generated test shows it. Declare a finding you cannot fix
+yet with ``known=`` and ``because=``.
+
+The tests need Python 3.11 or later, ``pip install pytest-obligation``, a
+broker and result backend they can reach, and Linux or macOS. Celery's own
+``t/due_work`` directory has worked examples.
+
+.. _`pytest-obligation`: https://github.com/gigaverse-app/pytest-obligation
+

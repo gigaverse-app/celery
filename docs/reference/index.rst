@@ -45,6 +45,7 @@
     celery.contrib.testing.app
     celery.contrib.testing.manager
     celery.contrib.testing.mocks
+    celery.contrib.testing.obligation
     celery.contrib.rdb
     celery.events
     celery.events.receiver
