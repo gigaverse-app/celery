@@ -18,7 +18,8 @@ what it finds changes.
 
 - [celery/celery#10726](https://github.com/celery/celery/pull/10726) proposes this contract to Celery.
 - [celery/celery#10724](https://github.com/celery/celery/issues/10724) came from it, and is fixed on
-  `main` by #10752 and #10759. The contract saw both fixes without being told about them.
+  `main` by [celery/celery#10752](https://github.com/celery/celery/pull/10752) and
+  [celery/celery#10759](https://github.com/celery/celery/pull/10759). The contract saw both fixes without being told about them.
 - [celery/celery#10725](https://github.com/celery/celery/issues/10725) and
   [celery/celery#10949](https://github.com/celery/celery/issues/10949) are still open.
 
