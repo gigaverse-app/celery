@@ -1,3 +1,5 @@
 # t/due_work: Celery's worker checked with pytest-obligation, which needs Python 3.11 or later.
-pytest-obligation>=0.20.0; python_version >= "3.11"
+# Pinned to pytest-obligation main (it has #172, the SIGKILL deaths) until the next release; then pytest-obligation>=0.21.
+pytest-obligation @ git+https://github.com/gigaverse-app/pytest-obligation@d2b281e2138d5c80b9af867804d2c69cb81731b8#subdirectory=package ; python_version >= "3.11"
 redis
+sqlalchemy
