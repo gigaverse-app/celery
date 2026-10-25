@@ -32,26 +32,51 @@ what it finds changes.
 
 Other pytest tests and workflow steps are not included in these counts.
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-1-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-1-light.svg" width="18" height="36" alt="1 applications" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-1-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-1-light.svg" width="18" height="36" alt="10 contract checks passed" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="57" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/divider-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/divider-light.svg" width="1" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="12" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/bad-6-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/bad-6-light.svg" width="18" height="36" alt="6 contract failures" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="68" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 blocked checks" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="75" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 coverage gaps" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="72" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 rejected bindings" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="73" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-0-light.svg" width="18" height="36" alt="0 skipped tests" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/captions-with-skips-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/captions-with-skips-light.svg" width="640" height="34" alt="applications · contract checks passed · contract failures · blocked checks · coverage gaps · rejected bindings · skipped tests" align="middle"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-5-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-5-light.svg" width="18" height="36" alt="5 applications" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-5-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-5-light.svg" width="18" height="36" alt="51 contract checks passed" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-1-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-1-light.svg" width="18" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="57" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/divider-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/divider-light.svg" width="1" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="12" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/bad-9-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/bad-9-light.svg" width="18" height="36" alt="9 contract failures" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="68" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 blocked checks" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="75" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 coverage gaps" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="72" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 rejected bindings" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="73" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-0-light.svg" width="18" height="36" alt="0 skipped tests" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/captions-with-skips-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/captions-with-skips-light.svg" width="640" height="34" alt="applications · contract checks passed · contract failures · blocked checks · coverage gaps · rejected bindings · skipped tests" align="middle"></picture></p>
 
-**Failures: 0 unexpected + 6 known expected.** Expected failures are declared by the application and do not fail CI. Review their reasons and evidence below; counts are checks, not distinct product bugs.
+**Failures: 0 unexpected + 9 known expected.** Expected failures are declared by the application and do not fail CI. Review their reasons and evidence below; counts are checks, not distinct product bugs.
 
 **Test step succeeded with known expected failures.**
 
 <details>
 <summary>Application inventory and skipped tests</summary>
 
-**1** applications with results · **0** applications not run
+**5** applications with results · **0** applications not run
 Checks skipped: **0**.
 
 
 Static declarations only; dynamically generated suites may be absent. No application code was imported.
+Application name unresolved: t.due&#95;work.test&#95;application&#95;contract.test&#95;DefaultConfiguration; showing its suite name.
+Application name unresolved: t.due&#95;work.test&#95;application&#95;contract.test&#95;RequeuedWithoutAKey; showing its suite name.
+Application name unresolved: t.due&#95;work.test&#95;application&#95;contract.test&#95;RequeuedWithAKey; showing its suite name.
 
 </details>
 
+### Applications
+
+All collected applications, most actionable first. Expand the evidence below for reasons and tickets.
+
+| Application | Passed | Failed | Blocked | Gaps | Rejected |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| celery: the worker runni&#8203;ng a task | **10** | 🔴 **6** | 0 | 0 | 0 |
+| celery: welcome.send&#95;wel&#8203;come&#95;email through the w&#8203;orker | **10** | 🔴 **1** | 0 | 0 | 0 |
+| celery: welcome.send&#95;wel&#8203;come&#95;email&#95;requeued thro&#8203;ugh the worker | **10** | 🔴 **1** | 0 | 0 | 0 |
+| a worker runs it with a &#8203;link | **10** | 🔴 **1** | 0 | 0 | 0 |
 
 <details>
-<summary><strong>celery: the worker runni&#8203;ng a task</strong><div align="right"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-1-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-1-light.svg" width="8" height="16" alt="10 passed" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="8" height="16" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-passed-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-passed-light.svg" width="37" height="18" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="29" height="18" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/divider-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/divider-light.svg" width="1" height="22" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="12" height="18" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/bad-6-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/bad-6-light.svg" width="8" height="16" alt="6 failed" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-failed-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-failed-light.svg" width="33" height="18" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="40" height="18" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="8" height="16" alt="0 blocked" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-blocked-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-blocked-light.svg" width="44" height="18" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="36" height="18" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="8" height="16" alt="0 gaps" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-gaps-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-gaps-light.svg" width="27" height="18" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="39" height="18" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="8" height="16" alt="0 rejected" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-rejected-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/label-rejected-light.svg" width="48" height="18" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="34" height="18" alt="" align="middle"></picture></div></summary>
+<summary>1 applications · zero failures, blocked checks or gaps</summary>
+
+| Application | Passed | Failed | Blocked | Gaps | Rejected |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| celery: welcome.send&#95;wel&#8203;come&#95;email&#95;once through &#8203;the worker | **11** | 0 | 0 | 0 | 0 |
+
+</details>
+
+### Evidence and decisions
+
+
+<details>
+<summary><strong>celery: the worker runni&#8203;ng a task</strong> · evidence and decisions</summary>
 
 Contract contract setup: <code>t/due&#95;work/test&#95;worker&#95;contract.py:309</code>
 
@@ -168,6 +193,239 @@ No optional schedule-exploration cases were collected for this suite. Other Hypo
 
 
 Suite (application code): <code>t.due&#95;work.test&#95;worker&#95;contract.test&#95;WorkerContract</code>
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>celery: welcome.send&#95;wel&#8203;come&#95;email through the w&#8203;orker</strong> · evidence and decisions</summary>
+
+Contract suite: <code>t/due&#95;work/test&#95;application&#95;contract.py:59</code>
+
+<details>
+<summary><strong>🔴 Known defects · application-declared expected failures</strong></summary>
+
+Application reason: with acks&#95;late and reject&#95;on&#95;worker&#95;lost not both set (Celery&#x27;s default), a task whose pool child is lost is recorded FAILURE (WorkerLostError) and is not run again: lost as it starts, its effect never happens; lost after its body ran and before its result was stored, it is recorded FAILURE though its effect happened. Set both on the task to have it run again instead, and make the task safe to run twice
+
+Ticket not reported.
+
+<details>
+<summary>1 affected checks · execution evidence</summary>
+
+- <code>process-a worker runs welcome.send&#95;welcome&#95;email-assert&#95;process&#95;deaths&#95;converge</code>: Known expected failure
+- **call:** HistoriesDiverged: a worker runs welcome.send&#95;welcome&#95;email: normal operation reaches TaskOutcome(status=&#x27;SUCCESS&#x27;, effect=1), but these histories reach something else: {&#x27;died at task&#95;prerun&#x27;: TaskOutcome(status=&#x27;FAILURE&#x27;, effect=0), &#x27;died at mark&#95;as&#95;done&#x27;: TaskOutcome(status=&#x27;FAILURE&#x27;, effect=1), &#x27;died at task&#95;prerun (SIGKILL)&#x27;: TaskOutcome(status=&#x27;FAILURE&#x27;, effect=0), &#x27;died at mark&#95;as&#95;done (SIGKILL)&#x27;: TaskOutcome(status=&#x27;FAILURE&#x27;, effect=1)}. Work was lost or repeated. A loss is work handed off only by a message, a commit hook or code after a commit that a dead worker never runs: commit the handoff with the state that owes it, or make that state selectable by recovery. A repeat is recovery…
+
+</details>
+
+These are application declarations. An expected failure can come from a declared gap or an unmet proof precondition; inspect its execution and diagnostics before treating it as a reproduced product defect.
+
+</details>
+
+<details>
+<summary><strong>⚪ Deliberate exclusions</strong></summary>
+
+- **Unfinished work gets recovered (A)** · Not claimed by application. Application reason: Celery keeps no owed state of its own to sweep: a message the worker did not acknowledge is the broker&#x27;s to redeliver (task&#95;acks&#95;late), and one it did acknowledge is settled
+- **Worker ownership is bounded (B)** · Not claimed by application. Application reason: a task&#x27;s lease is the broker&#x27;s visibility timeout or connection, not a fenced claim Celery can check
+- **Uncertain outcomes are handled (C)** · Not claimed by application. Application reason: with task&#95;acks&#95;late a task whose worker died may run again; whether it reached its service is its own
+- **Needed records are retained (D)** · Not applicable (application decision). Application reason: stored results are the record of settled work, not work still owed
+- **Results eventually settle correctly (E)** · Not applicable (application decision). Application reason: one worker settles each delivery; no two results race to write it
+- **Owed work is discovered from stored facts (F)** · Not applicable (application decision). Application reason: the obligation is the message itself, not a fact derived from product state
+- **Execution respects its gate (G)** · Not claimed by application. Application reason: Celery&#x27;s worker contract has no application readiness predicate; dependencies and product gates need their own ExecutionGate binding, including release with its notification lost.
+- **Repeating work is harmless (H)** · Not claimed by application. Application reason: a task can run more than once (with task&#95;acks&#95;late, a redelivery after its worker was lost), so rerunning it must be safe, but that is a property of each task&#x27;s function, not of Celery
+- **Intent and work are saved together (I)** · Not claimed by application. Application reason: Celery&#x27;s worker receives already admitted work; it cannot make an application&#x27;s product transaction atomic with enqueue. Bind Profile I on the application&#x27;s command contract.
+- **Retries have a limit (J)** · Not claimed by application. Application reason: a task&#x27;s retries are its own (self.retry, autoretry&#95;for); a redelivery after a lost worker is not counted as one
+
+These are scope decisions, not demonstrated defects. Review their reasons when the application changes.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Hypothesis · No generated scenario bindings collected</strong></summary>
+
+No optional schedule-exploration cases were collected for this suite. Other Hypothesis use inside application callbacks is not assessed here.
+
+</details>
+
+---
+
+<details>
+<summary><strong>🟢 0 supported guarantees</strong></summary>
+
+
+Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract.test&#95;DefaultConfiguration</code>
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>celery: welcome.send&#95;wel&#8203;come&#95;email&#95;requeued thro&#8203;ugh the worker</strong> · evidence and decisions</summary>
+
+Contract suite: <code>t/due&#95;work/test&#95;application&#95;contract.py:66</code>
+
+<details>
+<summary><strong>🔴 Known defects · application-declared expected failures</strong></summary>
+
+Application reason: a pool child lost after the email left, before the result was stored, runs the task again and sends the email twice: send&#95;welcome&#95;email&#95;requeued sends no key the provider could drop a repeat by
+
+Ticket not reported.
+
+<details>
+<summary>1 affected checks · execution evidence</summary>
+
+- <code>process-a worker runs welcome.send&#95;welcome&#95;email&#95;requeued-assert&#95;process&#95;deaths&#95;converge</code>: Known expected failure
+- **call:** HistoriesDiverged: a worker runs welcome.send&#95;welcome&#95;email&#95;requeued: normal operation reaches TaskOutcome(status=&#x27;SUCCESS&#x27;, effect=1), but these histories reach something else: {&#x27;died at mark&#95;as&#95;done&#x27;: TaskOutcome(status=&#x27;SUCCESS&#x27;, effect=2)}. Work was lost or repeated. A loss is work handed off only by a message, a commit hook or code after a commit that a dead worker never runs: commit the handoff with the state that owes it, or make that state selectable by recovery. A repeat is recovery redoing an external call whose effect already exists: make the call idempotent, or record the attempt before it
+
+</details>
+
+These are application declarations. An expected failure can come from a declared gap or an unmet proof precondition; inspect its execution and diagnostics before treating it as a reproduced product defect.
+
+</details>
+
+<details>
+<summary><strong>⚪ Deliberate exclusions</strong></summary>
+
+- **Unfinished work gets recovered (A)** · Not claimed by application. Application reason: Celery keeps no owed state of its own to sweep: a message the worker did not acknowledge is the broker&#x27;s to redeliver (task&#95;acks&#95;late), and one it did acknowledge is settled
+- **Worker ownership is bounded (B)** · Not claimed by application. Application reason: a task&#x27;s lease is the broker&#x27;s visibility timeout or connection, not a fenced claim Celery can check
+- **Uncertain outcomes are handled (C)** · Not claimed by application. Application reason: with task&#95;acks&#95;late a task whose worker died may run again; whether it reached its service is its own
+- **Needed records are retained (D)** · Not applicable (application decision). Application reason: stored results are the record of settled work, not work still owed
+- **Results eventually settle correctly (E)** · Not applicable (application decision). Application reason: one worker settles each delivery; no two results race to write it
+- **Owed work is discovered from stored facts (F)** · Not applicable (application decision). Application reason: the obligation is the message itself, not a fact derived from product state
+- **Execution respects its gate (G)** · Not claimed by application. Application reason: Celery&#x27;s worker contract has no application readiness predicate; dependencies and product gates need their own ExecutionGate binding, including release with its notification lost.
+- **Repeating work is harmless (H)** · Not claimed by application. Application reason: a task can run more than once (with task&#95;acks&#95;late, a redelivery after its worker was lost), so rerunning it must be safe, but that is a property of each task&#x27;s function, not of Celery
+- **Intent and work are saved together (I)** · Not claimed by application. Application reason: Celery&#x27;s worker receives already admitted work; it cannot make an application&#x27;s product transaction atomic with enqueue. Bind Profile I on the application&#x27;s command contract.
+- **Retries have a limit (J)** · Not claimed by application. Application reason: a task&#x27;s retries are its own (self.retry, autoretry&#95;for); a redelivery after a lost worker is not counted as one
+
+These are scope decisions, not demonstrated defects. Review their reasons when the application changes.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Hypothesis · No generated scenario bindings collected</strong></summary>
+
+No optional schedule-exploration cases were collected for this suite. Other Hypothesis use inside application callbacks is not assessed here.
+
+</details>
+
+---
+
+<details>
+<summary><strong>🟢 0 supported guarantees</strong></summary>
+
+
+Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract.test&#95;RequeuedWithoutAKey</code>
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>a worker runs it with a &#8203;link</strong> · evidence and decisions</summary>
+
+Contract suite: <code>t/due&#95;work/test&#95;application&#95;contract.py:85</code>
+
+<details>
+<summary><strong>🔴 Known defects · application-declared expected failures</strong></summary>
+
+Application reason: when the broker refuses the task&#x27;s link, the task is recorded FAILURE though its effect happened, and the message is acknowledged, so the link is not sent again (https://github.com/celery/celery/issues/10725)
+
+Ticket not reported.
+
+<details>
+<summary>1 affected checks · execution evidence</summary>
+
+- <code>process-a worker runs it with a link-assert&#95;process&#95;deaths&#95;converge</code>: Known expected failure
+- **call:** HistoriesDiverged: a worker runs it with a link: normal operation reaches TaskOutcome(status=&#x27;SUCCESS&#x27;, effect=1), but these histories reach something else: {&quot;the broker refused the task&#x27;s link&quot;: TaskOutcome(status=&#x27;FAILURE&#x27;, effect=1)}. Work was lost or repeated. A loss is work handed off only by a message, a commit hook or code after a commit that a dead worker never runs: commit the handoff with the state that owes it, or make that state selectable by recovery. A repeat is recovery redoing an external call whose effect already exists: make the call idempotent, or record the attempt before it
+
+</details>
+
+These are application declarations. An expected failure can come from a declared gap or an unmet proof precondition; inspect its execution and diagnostics before treating it as a reproduced product defect.
+
+</details>
+
+<details>
+<summary><strong>⚪ Deliberate exclusions</strong></summary>
+
+- **Unfinished work gets recovered (A)** · Not claimed by application. Application reason: Celery keeps no owed state of its own to sweep: a message the worker did not acknowledge is the broker&#x27;s to redeliver (task&#95;acks&#95;late), and one it did acknowledge is settled
+- **Worker ownership is bounded (B)** · Not claimed by application. Application reason: a task&#x27;s lease is the broker&#x27;s visibility timeout or connection, not a fenced claim Celery can check
+- **Uncertain outcomes are handled (C)** · Not claimed by application. Application reason: with task&#95;acks&#95;late a task whose worker died may run again; whether it reached its service is its own
+- **Needed records are retained (D)** · Not applicable (application decision). Application reason: stored results are the record of settled work, not work still owed
+- **Results eventually settle correctly (E)** · Not applicable (application decision). Application reason: one worker settles each delivery; no two results race to write it
+- **Owed work is discovered from stored facts (F)** · Not applicable (application decision). Application reason: the obligation is the message itself, not a fact derived from product state
+- **Execution respects its gate (G)** · Not claimed by application. Application reason: Celery&#x27;s worker contract has no application readiness predicate; dependencies and product gates need their own ExecutionGate binding, including release with its notification lost.
+- **Repeating work is harmless (H)** · Not claimed by application. Application reason: a task can run more than once (with task&#95;acks&#95;late, a redelivery after its worker was lost), so rerunning it must be safe, but that is a property of each task&#x27;s function, not of Celery
+- **Intent and work are saved together (I)** · Not claimed by application. Application reason: Celery&#x27;s worker receives already admitted work; it cannot make an application&#x27;s product transaction atomic with enqueue. Bind Profile I on the application&#x27;s command contract.
+- **Retries have a limit (J)** · Not claimed by application. Application reason: a task&#x27;s retries are its own (self.retry, autoretry&#95;for); a redelivery after a lost worker is not counted as one
+
+These are scope decisions, not demonstrated defects. Review their reasons when the application changes.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Hypothesis · No generated scenario bindings collected</strong></summary>
+
+No optional schedule-exploration cases were collected for this suite. Other Hypothesis use inside application callbacks is not assessed here.
+
+</details>
+
+---
+
+<details>
+<summary><strong>🟢 0 supported guarantees</strong></summary>
+
+
+Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract.test&#95;WithALink</code>
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>celery: welcome.send&#95;wel&#8203;come&#95;email&#95;once through &#8203;the worker</strong> · evidence and decisions</summary>
+
+Contract suite: <code>t/due&#95;work/test&#95;application&#95;contract.py:79</code>
+
+<details>
+<summary><strong>⚪ Deliberate exclusions</strong></summary>
+
+- **Unfinished work gets recovered (A)** · Not claimed by application. Application reason: Celery keeps no owed state of its own to sweep: a message the worker did not acknowledge is the broker&#x27;s to redeliver (task&#95;acks&#95;late), and one it did acknowledge is settled
+- **Worker ownership is bounded (B)** · Not claimed by application. Application reason: a task&#x27;s lease is the broker&#x27;s visibility timeout or connection, not a fenced claim Celery can check
+- **Uncertain outcomes are handled (C)** · Not claimed by application. Application reason: with task&#95;acks&#95;late a task whose worker died may run again; whether it reached its service is its own
+- **Needed records are retained (D)** · Not applicable (application decision). Application reason: stored results are the record of settled work, not work still owed
+- **Results eventually settle correctly (E)** · Not applicable (application decision). Application reason: one worker settles each delivery; no two results race to write it
+- **Owed work is discovered from stored facts (F)** · Not applicable (application decision). Application reason: the obligation is the message itself, not a fact derived from product state
+- **Execution respects its gate (G)** · Not claimed by application. Application reason: Celery&#x27;s worker contract has no application readiness predicate; dependencies and product gates need their own ExecutionGate binding, including release with its notification lost.
+- **Repeating work is harmless (H)** · Not claimed by application. Application reason: a task can run more than once (with task&#95;acks&#95;late, a redelivery after its worker was lost), so rerunning it must be safe, but that is a property of each task&#x27;s function, not of Celery
+- **Intent and work are saved together (I)** · Not claimed by application. Application reason: Celery&#x27;s worker receives already admitted work; it cannot make an application&#x27;s product transaction atomic with enqueue. Bind Profile I on the application&#x27;s command contract.
+- **Retries have a limit (J)** · Not claimed by application. Application reason: a task&#x27;s retries are its own (self.retry, autoretry&#95;for); a redelivery after a lost worker is not counted as one
+
+These are scope decisions, not demonstrated defects. Review their reasons when the application changes.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Hypothesis · No generated scenario bindings collected</strong></summary>
+
+No optional schedule-exploration cases were collected for this suite. Other Hypothesis use inside application callbacks is not assessed here.
+
+</details>
+
+---
+
+<details>
+<summary><strong>🟢 0 supported guarantees</strong></summary>
+
+
+Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract.test&#95;RequeuedWithAKey</code>
 
 </details>
 
