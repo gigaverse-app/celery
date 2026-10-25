@@ -1,6 +1,6 @@
 # Celery, checked by pytest-obligation
 
-[![pytest-obligation](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gigaverse-app/celery/obligation-readme/.github/obligation-badge.json)](#what-the-contract-finds-in-celerys-main)
+[![pytest-obligation](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gigaverse-app/celery/main/.github/obligation-badge.json)](#what-the-contract-finds-in-celerys-main)
 
 This is [Celery](https://github.com/celery/celery) with one addition: a
 [pytest-obligation](https://github.com/gigaverse-app/pytest-obligation) contract for Celery's

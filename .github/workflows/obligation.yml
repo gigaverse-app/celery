@@ -133,8 +133,7 @@ jobs:
         id: lane
         run: echo "outcome=$(jq -r .test_outcome evidence/manifest.json)" >> "$GITHUB_OUTPUT"
       - name: Render the report into the README and the badge
-        # Unreleased: gigaverse-app/pytest-obligation#171 adds readme-path and badge-path; v1 once released.
-        uses: gigaverse-app/pytest-obligation/report@eb0df468b2c6c290b069ad76b88e176e3feef419
+        uses: gigaverse-app/pytest-obligation/report@v1
         with:
           application-paths: t/due_work
           report-path: evidence/reports/*.json
