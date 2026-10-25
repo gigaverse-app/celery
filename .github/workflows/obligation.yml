@@ -62,3 +62,50 @@ jobs:
           expected-reports: '1'
           test-outcome: ${{ steps.tests.outcome }}
           sticky-key: celery-${{ matrix.celery }}
+
+  readme:
+    # Keeps the Celery-main lane's report in .github/README.md, the fork's front page, with a badge.
+    # It runs no tests: it re-renders the lane's uploaded evidence, so it is the only job that can write.
+    name: README report (Celery main)
+    needs: contract
+    if: ${{ !cancelled() && github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # commit the README block and the badge when they change
+    concurrency:
+      group: obligation-readme-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download the Celery-main lane's evidence
+        uses: actions/download-artifact@v8
+        with:
+          name: obligation-celery-upstream-main-${{ github.run_attempt }}
+          path: evidence
+      - name: Read that lane's test outcome
+        id: lane
+        run: echo "outcome=$(jq -r .test_outcome evidence/manifest.json)" >> "$GITHUB_OUTPUT"
+      - name: Render the report into the README and the badge
+        # Unreleased: gigaverse-app/pytest-obligation#171 adds readme-path and badge-path; v1 once released.
+        uses: gigaverse-app/pytest-obligation/report@d6cb115a349967802a4f53cd295faa6bd804a390
+        with:
+          application-paths: t/due_work
+          report-path: evidence/reports/*.json
+          expected-reports: '1'
+          test-outcome: ${{ steps.lane.outputs.outcome }}
+          post-comment: 'false'
+          sticky-key: celery-readme
+          readme-path: .github/README.md
+          readme-source: nightly run of t/due_work against Celery's current main
+          badge-path: .github/obligation-badge.json
+      - name: Commit them if the evidence changed
+        run: |
+          git add .github/README.md .github/obligation-badge.json
+          if git diff --cached --quiet; then
+            echo "The report is unchanged; nothing to commit."
+            exit 0
+          fi
+          git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com \
+            commit -m "Update the pytest-obligation report from Celery main"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
