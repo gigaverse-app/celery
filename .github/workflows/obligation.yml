@@ -44,7 +44,9 @@ jobs:
             echo "Already has Celery main \`$upstream\`." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com             merge --no-edit -m "Merge Celery main $upstream" FETCH_HEAD || {
+          git config user.name github-actions
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git merge --no-edit -m "Merge Celery main $upstream" FETCH_HEAD || {
             echo "::error::Celery's main conflicts with this branch; merge it by hand."
             exit 1
           }
