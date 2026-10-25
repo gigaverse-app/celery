@@ -3,6 +3,8 @@
 # Two lanes: this fork's own code, and Celery's current main (its celery/ package checked out
 # over this fork's), nightly and on demand. A change in what any failure leaves turns a lane red:
 # that is the signal to report upstream, as a plain issue with a standalone reproduction.
+# Nightly and on demand, the sync job first merges Celery's main into the branch, so the fork
+# itself stays current and not only what it tests.
 name: Obligation contract
 
 on:
@@ -18,8 +20,45 @@ permissions:
   contents: read
 
 jobs:
+  sync:
+    name: Sync with Celery main
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # push the merge
+    steps:
+      # GITHUB_TOKEN may not push commits that change workflow files, and Celery's often do. A
+      # FORK_SYNC_TOKEN secret (contents and workflows write on this repository) lifts that; without
+      # it such a sync fails here, visibly, and "Sync fork" on GitHub does it by hand.
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          token: ${{ secrets.FORK_SYNC_TOKEN || github.token }}
+      - name: Merge Celery's main into ${{ github.ref_name }}
+        run: |
+          git fetch --no-tags https://github.com/celery/celery.git main
+          upstream="$(git rev-parse --short FETCH_HEAD)"
+          if git merge-base --is-ancestor FETCH_HEAD HEAD; then
+            echo "Already has Celery main \`$upstream\`." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com             merge --no-edit -m "Merge Celery main $upstream" FETCH_HEAD || {
+            echo "::error::Celery's main conflicts with this branch; merge it by hand."
+            exit 1
+          }
+          if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            echo "::error::Could not push the merge. If Celery's new commits change workflow files, add a FORK_SYNC_TOKEN secret with contents and workflows write access, or press Sync fork on GitHub."
+            exit 1
+          fi
+          echo "Merged Celery main \`$upstream\`." >> "$GITHUB_STEP_SUMMARY"
+
   contract:
     name: contract (${{ matrix.celery }})
+    # After the sync, whatever it did; on a push or a pull request there is no sync.
+    needs: sync
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -36,6 +75,9 @@ jobs:
           - 6379:6379
     steps:
       - uses: actions/checkout@v7
+        with:
+          # Nightly and on demand, the branch head after the sync rather than the commit that started the run.
+          ref: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref_name || '' }}
       - name: Check out Celery's current main package
         if: matrix.celery == 'upstream-main'
         run: |
@@ -78,6 +120,8 @@ jobs:
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref_name || '' }}
       - name: Download the Celery-main lane's evidence
         uses: actions/download-artifact@v8
         with:
@@ -88,7 +132,7 @@ jobs:
         run: echo "outcome=$(jq -r .test_outcome evidence/manifest.json)" >> "$GITHUB_OUTPUT"
       - name: Render the report into the README and the badge
         # Unreleased: gigaverse-app/pytest-obligation#171 adds readme-path and badge-path; v1 once released.
-        uses: gigaverse-app/pytest-obligation/report@d6cb115a349967802a4f53cd295faa6bd804a390
+        uses: gigaverse-app/pytest-obligation/report@eb0df468b2c6c290b069ad76b88e176e3feef419
         with:
           application-paths: t/due_work
           report-path: evidence/reports/*.json
