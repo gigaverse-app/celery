@@ -4,7 +4,7 @@
 # over this fork's), nightly and on demand. A change in what any failure leaves turns a lane red:
 # that is the signal to report upstream, as a plain issue with a standalone reproduction.
 # Nightly and on demand, the sync job first merges Celery's main into the branch, so the fork
-# itself stays current and not only what it tests.
+# itself stays current and not only what it tests. It keeps this fork's workflow files.
 name: Obligation contract
 
 on:
@@ -28,14 +28,10 @@ jobs:
     permissions:
       contents: write # push the merge
     steps:
-      # GITHUB_TOKEN may not push commits that change workflow files, and Celery's often do. A
-      # FORK_SYNC_TOKEN secret (contents and workflows write on this repository) lifts that; without
-      # it such a sync fails here, visibly, and "Sync fork" on GitHub does it by hand.
       - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
-          token: ${{ secrets.FORK_SYNC_TOKEN || github.token }}
       - name: Merge Celery's main into ${{ github.ref_name }}
         run: |
           git fetch --no-tags https://github.com/celery/celery.git main
@@ -46,15 +42,19 @@ jobs:
           fi
           git config user.name github-actions
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git merge --no-edit -m "Merge Celery main $upstream" FETCH_HEAD || {
-            echo "::error::Celery's main conflicts with this branch; merge it by hand."
-            exit 1
-          }
-          if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
-            echo "::error::Could not push the merge. If Celery's new commits change workflow files, add a FORK_SYNC_TOKEN secret with contents and workflows write access, or press Sync fork on GitHub."
+          git merge --no-commit --no-ff FETCH_HEAD || true
+          # Keep this fork's workflow files as they are. GITHUB_TOKEN may not push a commit that changes
+          # one, and Celery's own CI workflows are disabled here (they need Celery's runners), so its
+          # edits to them are left out: this fork's copies are restored and files it adds are dropped.
+          git checkout HEAD -- .github/workflows
+          git diff --cached --name-only --diff-filter=A HEAD -- .github/workflows | xargs -r git rm -q -f --
+          if [ -n "$(git diff --name-only --diff-filter=U)" ]; then
+            echo "::error::Celery's main conflicts with this branch outside .github/workflows; merge it by hand: $(git diff --name-only --diff-filter=U | tr '\n' ' ')"
             exit 1
           fi
-          echo "Merged Celery main \`$upstream\`." >> "$GITHUB_STEP_SUMMARY"
+          git commit -q --no-edit -m "Merge Celery main $upstream"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "Merged Celery main \`$upstream\`, keeping this fork's workflow files." >> "$GITHUB_STEP_SUMMARY"
 
   contract:
     name: contract (${{ matrix.celery }})
