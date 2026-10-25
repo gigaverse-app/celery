@@ -6,7 +6,6 @@ SQLAlchemy, where a chord is joined by polling (``chord_unlock``) instead of Red
 
 import os
 import tempfile
-import time
 
 import redis
 
@@ -37,10 +36,14 @@ def application(name, backend):
         RECORDS.rpush('sent', message)
         return message
 
-    @app.task(shared=False, name='due_work.send_slowly')
-    def send_slowly(message):
-        """A header that takes long enough for chord_unlock to find the chord unfinished and retry."""
-        time.sleep(1.5)
+    @app.task(shared=False, bind=True, max_retries=1, name='due_work.send_after_a_retry')
+    def send_after_a_retry(self, message):
+        """
+        A header that retries once before it sends, so chord_unlock (first run 1 s after the chord) always finds
+        the chord unfinished and retries itself, however fast or slow the machine.
+        """
+        if self.request.retries == 0:
+            raise self.retry(countdown=3)
         RECORDS.rpush('sent', message)
         return message
 

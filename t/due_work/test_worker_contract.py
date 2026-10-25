@@ -35,6 +35,7 @@ or macOS, Redis on localhost, SQLAlchemy)::
 
 import redis
 from pytest_obligation import Findings, due_work_contract_suite
+from pytest_obligation.helpers import wait_until
 from pytest_obligation.integrations.celery_worker import (DEATH_POINTS, FAILURE_POINTS, SIGKILL_DEATH_POINTS,
                                                           worker_contract, worker_history)
 
@@ -75,6 +76,9 @@ def chord_of(app, *headers):
 
     def send():
         empty()
+        # The worker answers before the chord is sent, so a slow start never lets chord_unlock (first run 1 s
+        # after the chord, a countdown Celery fixes) overtake a header and decide the history by timing.
+        wait_until(lambda: app.control.ping(timeout=0.5), timeout=30, what='the worker did not start')
         header = [
             app.tasks[f'due_work.{task}'].s(f'order {n} has shipped') for n, task in enumerate(headers, start=1)
         ]
@@ -167,6 +171,7 @@ def chord_history(
     env=None,
     task='due_work.send_message',
     settled=None,
+    death_points=DEATH_POINTS + SIGKILL_DEATH_POINTS,
     failure_points=FAILURE_POINTS,
 ):
     """A chord through the worker, failing at Celery's stages (SIGKILL deaths included) on the header ``task``."""
@@ -179,7 +184,7 @@ def chord_history(
         initial=('PENDING', 0, (), ()),
         expected=findings.delivered,
         settled=settled or body_ready(app),
-        death_points=DEATH_POINTS + SIGKILL_DEATH_POINTS,
+        death_points=death_points,
         failure_points=failure_points,
         findings=findings,
         env=env,
@@ -235,11 +240,15 @@ DATABASE_CHORD_FINDINGS = Findings(
 WAITING_DATABASE_CHORD_FINDINGS = Findings(
     ('SUCCESS', 2, ('sent 2 messages',), (BOTH_SENT,)),
     LOST_AS_IT_STARTED
-    | LOST_AFTER_ITS_EFFECT
     | {
-        # FINDING (#10955): chord_unlock's retry is refused while a header runs. Task.retry turns that into
-        # Reject(requeue=False), chord_unlock keeps no result, and the chord is never joined: both messages
-        # were sent, the body stays PENDING forever, and no callback ever fires.
+        # FINDING (the shape of #10954): the header's first execution had already published its own retry when
+        # its child died. The header is recorded FAILURE and the chord fails with ChordError, yet the retry still
+        # runs and sends its message.
+        'died at task_postrun': ('FAILURE', 2, ('failed: ChordError',), ()),
+        'died at task_postrun (SIGKILL)': ('FAILURE', 2, ('failed: ChordError',), ()),
+        # FINDING (#10955): chord_unlock's retry is refused while the header waits on its own. Task.retry turns
+        # that into Reject(requeue=False), chord_unlock keeps no result, and the chord is never joined: both
+        # messages were sent, the body stays PENDING forever, and no callback ever fires.
         "the broker refused the task's link": ('PENDING', 2, (), ()),
     },
 )
@@ -271,15 +280,20 @@ DATABASE_CHORD = chord_history(
     due_work.database_app,
     DATABASE_CHORD_FINDINGS,
     app_path='t.due_work.app:database_app',
+    settled=body_ready_or_chord_unlock_failed,
 )
 WAITING_DATABASE_CHORD = chord_history(
     'a worker runs a chord with results in a database, whose chord_unlock retries while a header runs',
-    chord_of(due_work.database_app, 'send_slowly', 'send_message'),
+    chord_of(due_work.database_app, 'send_after_a_retry', 'send_message'),
     due_work.database_app,
     WAITING_DATABASE_CHORD_FINDINGS,
     app_path='t.due_work.app:database_app',
-    task='due_work.send_slowly',
+    task='due_work.send_after_a_retry',
     settled=body_ready_or_chord_unlock_failed,
+    # The header's first execution ends in its retry: it never stores a result or runs on_success, so only
+    # the deaths around it, and the refused publish of chord_unlock's own retry, can be reached.
+    death_points=('task_prerun', 'task_postrun', 'task_prerun (SIGKILL)', 'task_postrun (SIGKILL)'),
+    failure_points=("the broker refused the task's link",),
 )
 CHORDS = (CHORD, REQUEUED_CHORD, FAILING_HEADER, DATABASE_CHORD, WAITING_DATABASE_CHORD)
 
@@ -315,8 +329,9 @@ CONTRACT = worker_contract(
         ),
         WAITING_DATABASE_CHORD.name: (
             'a refused chord_unlock retry loses the chord: the body stays PENDING forever and no callback fires '
-            '(https://github.com/celery/celery/issues/10955); otherwise as on Redis. '
-            'WAITING_DATABASE_CHORD_FINDINGS pins each history'
+            '(https://github.com/celery/celery/issues/10955); a header lost after publishing its own retry is '
+            'recorded FAILURE and fails the chord though the retry still sends (the shape of '
+            'https://github.com/celery/celery/issues/10954). WAITING_DATABASE_CHORD_FINDINGS pins each history'
         ),
     },
 )
