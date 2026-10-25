@@ -21,7 +21,7 @@ what it finds changes.
   `main` by [celery/celery#10752](https://github.com/celery/celery/pull/10752) and
   [celery/celery#10759](https://github.com/celery/celery/pull/10759). The contract saw both fixes without being told about them.
 - [celery/celery#10725](https://github.com/celery/celery/issues/10725) and
-  [celery/celery#10949](https://github.com/celery/celery/issues/10949) are still open.
+  [celery/celery#10954](https://github.com/celery/celery/issues/10954) are still open.
 
 ## What the contract finds in Celery's main
 
