@@ -1,0 +1,64 @@
+# gigaverse-app/celery: Celery's worker checked with pytest-obligation's contract in t/due_work.
+#
+# Two lanes: this fork's own code, and Celery's current main (its celery/ package checked out
+# over this fork's), nightly and on demand. A change in what any failure leaves turns a lane red:
+# that is the signal to report upstream, as a plain issue with a standalone reproduction.
+name: Obligation contract
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    name: contract (${{ matrix.celery }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pull-requests: write # the report's PR comment on same-repo PRs; a fork PR's token stays read-only
+    strategy:
+      fail-fast: false
+      matrix:
+        celery: [this-fork, upstream-main]
+    services:
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check out Celery's current main package
+        if: matrix.celery == 'upstream-main'
+        run: |
+          git fetch --no-tags --depth 1 https://github.com/celery/celery.git main
+          git checkout FETCH_HEAD -- celery
+          echo "Celery main: [\`$(git rev-parse --short FETCH_HEAD)\`](https://github.com/celery/celery/commit/$(git rev-parse FETCH_HEAD))" >> "$GITHUB_STEP_SUMMARY"
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+          cache-dependency-path: '**/setup.py'
+      - name: Install tox
+        run: python -m pip install --upgrade pip 'tox' tox-gh-actions
+      - name: Run tox for "3.13-due_work"
+        id: tests
+        run: tox --verbose --verbose -e 3.13-due_work -- --due-work-profile-report=obligation-profiles.json
+      - name: Report what the contract proved
+        if: ${{ !cancelled() }}
+        uses: gigaverse-app/pytest-obligation/report@v1
+        with:
+          application-paths: t/due_work
+          report-path: obligation-profiles.json
+          expected-reports: '1'
+          test-outcome: ${{ steps.tests.outcome }}
+          sticky-key: celery-${{ matrix.celery }}
