@@ -1,4 +1,4 @@
-# gigaverse-app/celery: Celery's worker checked with pytest-obligation's contract in t/due_work.
+# gigaverse-app/celery-obligation: Celery's worker checked with pytest-obligation's contract in t/due_work.
 #
 # Two lanes: this fork's own code, and Celery's current main (its celery/ package checked out
 # over this fork's), nightly and on demand. A change in what any failure leaves turns a lane red:
