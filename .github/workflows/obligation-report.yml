@@ -21,9 +21,9 @@ jobs:
       group: obligation-report-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
       cancel-in-progress: false
     steps:
-      - uses: gigaverse-app/pytest-obligation/publish@v1
+      - uses: gigaverse-app/pytest-obligation/publish@main
         with:
           sticky-key: celery-this-fork
-      - uses: gigaverse-app/pytest-obligation/publish@v1
+      - uses: gigaverse-app/pytest-obligation/publish@main
         with:
           sticky-key: celery-upstream-main
