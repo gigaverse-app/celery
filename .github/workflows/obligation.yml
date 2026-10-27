@@ -107,7 +107,9 @@ jobs:
           expected-reports: '1'
           test-outcome: ${{ steps.tests.outcome }}
           sticky-key: celery-${{ matrix.celery }}
-          # Each lane has its own sticky; the title says which one it is.
+          # One sticky per PR: the fork's lane. The Celery-main lane still has its check, its job summary
+          # and its uploaded evidence, which the README report renders.
+          post-comment: ${{ matrix.celery == 'this-fork' && 'true' || 'false' }}
           title: ${{ matrix.celery == 'upstream-main' && 'Celery main' || 'This fork' }}
 
   readme:
