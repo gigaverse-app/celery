@@ -26,13 +26,13 @@ what it finds changes.
 ## What the contract finds in Celery's main
 
 <!-- pytest-obligation:start -->
-<a href="https://github.com/gigaverse-app/pytest-obligation"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/sticky-banner-dark.svg"><img alt="pytest-obligation: what passed, what is missing, what to fix" src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/sticky-banner-light.svg" width="640"></picture></a>
+<a href="https://github.com/gigaverse-app/pytest-obligation"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/sticky-banner-dark.svg"><img alt="pytest-obligation: what passed, what is missing, what to fix" src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/sticky-banner-light.svg" width="640"></picture></a>
 
 ### Obligation contract checks
 
 Other pytest tests and workflow steps are not included in these counts.
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-5-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-5-light.svg" width="18" height="36" alt="5 applications" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-5-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-5-light.svg" width="18" height="36" alt="51 contract checks passed" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-1-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-1-light.svg" width="18" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="57" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/divider-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/divider-light.svg" width="1" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="12" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/bad-9-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/bad-9-light.svg" width="18" height="36" alt="9 contract failures" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="68" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 blocked checks" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="75" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 coverage gaps" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="72" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 rejected bindings" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="73" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/neutral-0-light.svg" width="18" height="36" alt="0 skipped tests" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/captions-with-skips-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/v1/docs/assets/report-glyphs/captions-with-skips-light.svg" width="640" height="34" alt="applications · contract checks passed · contract failures · blocked checks · coverage gaps · rejected bindings · skipped tests" align="middle"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/neutral-5-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/neutral-5-light.svg" width="18" height="36" alt="5 applications" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-5-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-5-light.svg" width="18" height="36" alt="51 contract checks passed" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-1-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-1-light.svg" width="18" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="57" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/divider-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/divider-light.svg" width="1" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="12" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/bad-9-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/bad-9-light.svg" width="18" height="36" alt="9 contract failures" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="68" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 blocked checks" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="75" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 coverage gaps" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="72" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 rejected bindings" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="73" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/neutral-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/neutral-0-light.svg" width="18" height="36" alt="0 skipped tests" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/captions-with-skips-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/captions-with-skips-light.svg" width="640" height="34" alt="applications · contract checks passed · contract failures · blocked checks · coverage gaps · rejected bindings · skipped tests" align="middle"></picture></p>
 
 **Failures: 0 unexpected + 9 known expected.** Expected failures are declared by the application and do not fail CI. Review their reasons and evidence below; counts are checks, not distinct product bugs.
 
@@ -59,16 +59,16 @@ All collected applications, most actionable first. Expand the evidence below for
 | Application | Passed | Failed | Blocked | Gaps | Rejected |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | celery: the worker runni&#8203;ng a task | **10** | 🔴 **6** | 0 | 0 | 0 |
-| celery: welcome.send&#95;wel&#8203;come&#95;email through the w&#8203;orker | **10** | 🔴 **1** | 0 | 0 | 0 |
-| celery: welcome.send&#95;wel&#8203;come&#95;email&#95;requeued thro&#8203;ugh the worker | **10** | 🔴 **1** | 0 | 0 | 0 |
-| a worker runs it with a &#8203;link | **10** | 🔴 **1** | 0 | 0 | 0 |
+| celery: a worker runs we&#8203;lcome.send&#95;welcome&#95;email | **10** | 🔴 **1** | 0 | 0 | 0 |
+| celery: a worker runs we&#8203;lcome.send&#95;welcome&#95;email&#8203;&#95;requeued | **10** | 🔴 **1** | 0 | 0 | 0 |
+| celery: a worker runs it&#8203; with a link | **10** | 🔴 **1** | 0 | 0 | 0 |
 
 <details>
 <summary>1 applications · zero failures, blocked checks or gaps</summary>
 
 | Application | Passed | Failed | Blocked | Gaps | Rejected |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| celery: welcome.send&#95;wel&#8203;come&#95;email&#95;once through &#8203;the worker | **11** | 0 | 0 | 0 | 0 |
+| celery: a worker runs we&#8203;lcome.send&#95;welcome&#95;email&#8203;&#95;once | **11** | 0 | 0 | 0 | 0 |
 
 </details>
 
@@ -78,7 +78,7 @@ All collected applications, most actionable first. Expand the evidence below for
 <details>
 <summary><strong>celery: the worker runni&#8203;ng a task</strong> · evidence and decisions</summary>
 
-Contract contract setup: <code>t/due&#95;work/test&#95;worker&#95;contract.py:309</code>
+Contract contract setup: <code>t/due&#95;work/test&#95;worker&#95;contract.py:306</code>
 
 <details>
 <summary><strong>🔴 Known defects · application-declared expected failures</strong></summary>
@@ -189,7 +189,7 @@ No optional schedule-exploration cases were collected for this suite. Other Hypo
 ---
 
 <details>
-<summary><strong>🟢 0 supported guarantees</strong></summary>
+<summary><strong>⚪ 0 supported guarantees</strong></summary>
 
 
 Suite (application code): <code>t.due&#95;work.test&#95;worker&#95;contract.test&#95;WorkerContract</code>
@@ -199,7 +199,7 @@ Suite (application code): <code>t.due&#95;work.test&#95;worker&#95;contract.test
 </details>
 
 <details>
-<summary><strong>celery: welcome.send&#95;wel&#8203;come&#95;email through the w&#8203;orker</strong> · evidence and decisions</summary>
+<summary><strong>celery: a worker runs we&#8203;lcome.send&#95;welcome&#95;email</strong> · evidence and decisions</summary>
 
 Contract suite: <code>t/due&#95;work/test&#95;application&#95;contract.py:59</code>
 
@@ -252,7 +252,7 @@ No optional schedule-exploration cases were collected for this suite. Other Hypo
 ---
 
 <details>
-<summary><strong>🟢 0 supported guarantees</strong></summary>
+<summary><strong>⚪ 0 supported guarantees</strong></summary>
 
 
 Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract.test&#95;DefaultConfiguration</code>
@@ -262,7 +262,7 @@ Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract
 </details>
 
 <details>
-<summary><strong>celery: welcome.send&#95;wel&#8203;come&#95;email&#95;requeued thro&#8203;ugh the worker</strong> · evidence and decisions</summary>
+<summary><strong>celery: a worker runs we&#8203;lcome.send&#95;welcome&#95;email&#8203;&#95;requeued</strong> · evidence and decisions</summary>
 
 Contract suite: <code>t/due&#95;work/test&#95;application&#95;contract.py:66</code>
 
@@ -315,7 +315,7 @@ No optional schedule-exploration cases were collected for this suite. Other Hypo
 ---
 
 <details>
-<summary><strong>🟢 0 supported guarantees</strong></summary>
+<summary><strong>⚪ 0 supported guarantees</strong></summary>
 
 
 Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract.test&#95;RequeuedWithoutAKey</code>
@@ -325,7 +325,7 @@ Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract
 </details>
 
 <details>
-<summary><strong>a worker runs it with a &#8203;link</strong> · evidence and decisions</summary>
+<summary><strong>celery: a worker runs it&#8203; with a link</strong> · evidence and decisions</summary>
 
 Contract suite: <code>t/due&#95;work/test&#95;application&#95;contract.py:85</code>
 
@@ -378,7 +378,7 @@ No optional schedule-exploration cases were collected for this suite. Other Hypo
 ---
 
 <details>
-<summary><strong>🟢 0 supported guarantees</strong></summary>
+<summary><strong>⚪ 0 supported guarantees</strong></summary>
 
 
 Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract.test&#95;WithALink</code>
@@ -388,7 +388,7 @@ Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract
 </details>
 
 <details>
-<summary><strong>celery: welcome.send&#95;wel&#8203;come&#95;email&#95;once through &#8203;the worker</strong> · evidence and decisions</summary>
+<summary><strong>celery: a worker runs we&#8203;lcome.send&#95;welcome&#95;email&#8203;&#95;once</strong> · evidence and decisions</summary>
 
 Contract suite: <code>t/due&#95;work/test&#95;application&#95;contract.py:79</code>
 
@@ -422,7 +422,7 @@ No optional schedule-exploration cases were collected for this suite. Other Hypo
 ---
 
 <details>
-<summary><strong>🟢 0 supported guarantees</strong></summary>
+<summary><strong>⚪ 0 supported guarantees</strong></summary>
 
 
 Suite (application code): <code>t.due&#95;work.test&#95;application&#95;contract.test&#95;RequeuedWithAKey</code>
@@ -453,5 +453,5 @@ Source: <code>nightly run of t/due&#95;work against Celery&#x27;s current main</
 
 </details>
 
-[Report guide](https://github.com/gigaverse-app/pytest-obligation/blob/v1/package/docs/github-action-report.md)
+[Report guide](https://github.com/gigaverse-app/pytest-obligation/blob/main/package/docs/github-action-report.md)
 <!-- pytest-obligation:end -->
