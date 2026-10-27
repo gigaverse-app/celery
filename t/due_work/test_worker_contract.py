@@ -98,10 +98,6 @@ def what_happened(task_id):
     )
 
 
-def settled(task_id):
-    return AsyncResult(task_id, app=due_work.app).ready()
-
-
 def what_the_chord_did(app):
     """OBSERVE: the body's state, how many messages left, what the callbacks announced, and the body's input."""
 
@@ -144,7 +140,8 @@ SEND_MESSAGE = worker_history(
     observe=what_happened,
     initial=('PENDING', 0, ()),
     expected=FINDINGS.delivered,
-    settled=settled,
+    # No settled of its own: the task's result is stored before its link or error callback has run, so
+    # "ready" can read the history early. The worker staying idle covers the callbacks too.
     findings=FINDINGS,
 )
 
