@@ -1,4 +1,4 @@
-# Posts the contract's report as one PR comment per lane, for PRs from forks of this fork too.
+# Posts the fork lane's contract report as the PR's one comment, for PRs from forks of this fork too.
 # Runs from the default branch after "Obligation contract", re-renders the uploaded evidence with
 # pytest-obligation's own reporter, and never checks out or runs the PR's code.
 name: Obligation report
@@ -21,9 +21,7 @@ jobs:
       group: obligation-report-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
       cancel-in-progress: false
     steps:
+      # The fork's lane only: the Celery-main lane posts no PR comment (obligation.yml).
       - uses: gigaverse-app/pytest-obligation/publish@main
         with:
           sticky-key: celery-this-fork
-      - uses: gigaverse-app/pytest-obligation/publish@main
-        with:
-          sticky-key: celery-upstream-main
