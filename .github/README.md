@@ -26,6 +26,13 @@ what it finds changes.
 ## What the contract finds in Celery's main
 
 <!-- pytest-obligation:start -->
+> [!CAUTION]
+> **The test step failed.**
+>
+> 9 failed contract checks recorded.
+>
+> Contract counts cover only obligation checks; inspect the run log for other failures.
+
 <a href="https://github.com/gigaverse-app/pytest-obligation"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/sticky-banner-dark.svg"><img alt="pytest-obligation: what passed, what is missing, what to fix" src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/sticky-banner-light.svg" width="640"></picture></a>
 
 ### Obligation contract checks
@@ -34,9 +41,7 @@ Other pytest tests and workflow steps are not included in these counts.
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/neutral-5-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/neutral-5-light.svg" width="18" height="36" alt="5 applications" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-1-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-1-light.svg" width="18" height="36" alt="1 contract checks passed" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="75" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/divider-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/divider-light.svg" width="1" height="36" alt="" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="12" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/bad-9-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/bad-9-light.svg" width="18" height="36" alt="9 contract failures" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="68" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 blocked checks" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="75" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 coverage gaps" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="72" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/good-0-light.svg" width="18" height="36" alt="0 rejected bindings" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="73" height="36" alt="" align="middle"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/neutral-0-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/neutral-0-light.svg" width="18" height="36" alt="0 skipped tests" align="middle"></picture><picture><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/space.svg" width="69" height="36" alt="" align="middle"></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/captions-with-skips-dark.svg"><img src="https://raw.githubusercontent.com/gigaverse-app/pytest-obligation/main/docs/assets/report-glyphs/captions-with-skips-light.svg" width="640" height="34" alt="applications · contract checks passed · contract failures · blocked checks · coverage gaps · rejected bindings · skipped tests" align="middle"></picture></p>
 
-**Failures: 0 unexpected + 9 known expected.** Expected failures are declared by the application and do not fail CI. Review their reasons and evidence below; counts are checks, not distinct product bugs.
-
-**Test step succeeded with known expected failures.**
+**Failures: 1 unexpected + 8 known expected.** Expected failures are declared by the application and do not fail CI. Review their reasons and evidence below; counts are checks, not distinct product bugs.
 
 <details>
 <summary>Application inventory and skipped tests</summary>
@@ -79,6 +84,19 @@ All collected applications, most actionable first. Expand the evidence below for
 <summary><strong>celery: the worker runni&#8203;ng a task</strong> · evidence and decisions</summary>
 
 Contract contract setup: <code>t/due&#95;work/test&#95;worker&#95;contract.py:306</code>
+
+**1 unexpected failures**
+
+AssertionError: a worker runs a chord with results in a database, whose chord&#95;unlock retries while a header runs: these histories no longer leave what the table pins: died at task&#95;postrun (SIGKILL): pinned (&#x27;FAILURE&#x27;, 2, (&#x27;failed: ChordError&#x27;,), ()), now (&#x27;SUCCESS&#x27;, 2, (&#x27;sent 2 messages&#x27;,), (&quot;&#91;&#x27;order 1 has shipped&#x27;, &#x27;order 2 has shipped&#x27;&#93;&quot;,))<br>asser…
+
+<details>
+<summary><strong>1 unexpected failures · diagnostics</strong></summary>
+
+- <code>process-a worker runs a chord with results in a database, whose chord&#95;unlock retries while a header runs-assert&#95;process&#95;deaths&#95;converge</code>: **Check failed**
+- **call:** AssertionError: a worker runs a chord with results in a database, whose chord&#95;unlock retries while a header runs: these histories no longer leave what the table pins: died at task&#95;postrun (SIGKILL): pinned (&#x27;FAILURE&#x27;, 2, (&#x27;failed: ChordError&#x27;,), ()), now (&#x27;SUCCESS&#x27;, 2, (&#x27;sent 2 messages&#x27;,), (&quot;&#91;&#x27;order 1 has shipped&#x27;, &#x27;order 2 has shipped&#x27;&#93;&quot;,))<br>assert not {&#x27;died at task&#95;postrun (SIGKILL)&#x27;: (&#x27;SUCCESS&#x27;, 2, (&#x27;sent 2 messages&#x27;,), (&quot;&#91;&#x27;order 1 has shipped&#x27;, &#x27;order 2 has shipped&#x27;&#93;&quot;,))}
+  - Guarantee: Unfinished work gets recovered
+
+</details>
 
 <details>
 <summary><strong>🔴 Known defects · application-declared expected failures</strong></summary>
@@ -150,8 +168,8 @@ Ticket not reported.
 <details>
 <summary>1 affected checks · execution evidence</summary>
 
-- <code>process-a worker runs a chord with results in a database, whose chord&#95;unlock retries while a header runs-assert&#95;process&#95;deaths&#95;converge</code>: Known expected failure
-- **call:** HistoriesDiverged: a worker runs a chord with results in a database, whose chord&#95;unlock retries while a header runs: normal operation reaches (&#x27;SUCCESS&#x27;, 2, (&#x27;sent 2 messages&#x27;,), (&quot;&#91;&#x27;order 1 has shipped&#x27;, &#x27;order 2 has shipped&#x27;&#93;&quot;,)), but these histories reach something else: {&#x27;died at task&#95;prerun&#x27;: (&#x27;FAILURE&#x27;, 1, (&#x27;failed: ChordError&#x27;,), ()), &#x27;died at task&#95;postrun&#x27;: (&#x27;FAILURE&#x27;, 2, (&#x27;failed: ChordError&#x27;,), ()), &#x27;died at task&#95;prerun (SIGKILL)&#x27;: (&#x27;FAILURE&#x27;, 1, (&#x27;failed: ChordError&#x27;,), ()), &#x27;died at task&#95;postrun (SIGKILL)&#x27;: (&#x27;FAILURE&#x27;, 2, (&#x27;failed: ChordError&#x27;,), ()), &quot;the broker refused the task&#x27;s link&quot;: (&#x27;PENDING&#x27;, 2, (), ())}. Work was lost or repeated. A loss is work handed off only by a mess…
+- <code>process-a worker runs a chord with results in a database, whose chord&#95;unlock retries while a header runs-assert&#95;process&#95;deaths&#95;converge</code>: Check failed
+- **call:** AssertionError: a worker runs a chord with results in a database, whose chord&#95;unlock retries while a header runs: these histories no longer leave what the table pins: died at task&#95;postrun (SIGKILL): pinned (&#x27;FAILURE&#x27;, 2, (&#x27;failed: ChordError&#x27;,), ()), now (&#x27;SUCCESS&#x27;, 2, (&#x27;sent 2 messages&#x27;,), (&quot;&#91;&#x27;order 1 has shipped&#x27;, &#x27;order 2 has shipped&#x27;&#93;&quot;,))<br>assert not {&#x27;died at task&#95;postrun (SIGKILL)&#x27;: (&#x27;SUCCESS&#x27;, 2, (&#x27;sent 2 messages&#x27;,), (&quot;&#91;&#x27;order 1 has shipped&#x27;, &#x27;order 2 has shipped&#x27;&#93;&quot;,))}
 
 </details>
 
@@ -448,7 +466,7 @@ Application totals include discovered declarations and reported suites. Skipped 
 
 Application names, quoted reasons and diagnostic values come from application code. Guarantee labels come from pytest-obligation. Results cover collected suites only; passing checks do not rate every test's quality.
 
-Test step (reported): **success**
+Test step (reported): **failure**
 Source: <code>nightly run of t/due&#95;work against Celery&#x27;s current main</code>
 
 </details>

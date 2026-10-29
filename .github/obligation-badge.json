@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "pytest-obligation",
-  "message": "1 passed · 9 known defects",
-  "color": "yellow"
+  "message": "1 passed · 8 known defects · 1 failing",
+  "color": "red"
 }
